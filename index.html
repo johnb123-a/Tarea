@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Motorepuestos</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
     <!-- comentario -->
     <header class="header">
-        <h1>Moto Repuestos Plata</h1>
-        <nav>
+        <h1 class="header--title">Moto Repuestos Plata</h1>
+        <nav class="header__nav">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="Repuestos.html">Repuestos</a></li>
@@ -21,54 +21,51 @@
     </header>
     <main class="main">
         <section class="articles">
-            <img class="logo" src="imagenes/logo.png.png" alt="">
-            <article class="about-me">
-                <h2>Quienes somos</h2>
-                <p> 
-                    somos una empresa dedicada a la distribuccion y comercializacion de accesorios
-                    y respuestos para tu motocicleta, aqui puedes encontrar una exelente calidad
-                    con los mejores precios del mercado contamos con gran variedad de productos y con 
-                    personal altamente califido a la hora de atenderte.
-                </p>
+            <article class="articles__about-me">
+                <img class="about-me--logo" src="img/logo.png.png" alt="">
+                <div class="about-me__content">
+                    <h2 class="content--title">Quienes somos</h2>
+                    <p class="content--paragraph"> 
+                        Somos una empresa dedicada a la distribuccion y comercializacion de accesorios
+                        y respuestos para tu motocicleta, aqui puedes encontrar una exelente calidad
+                        con los mejores precios del mercado contamos con gran variedad de productos y con 
+                        personal altamente califido a la hora de atenderte.
+                    </p>
+                </div>
             </article> 
-            <img class="image" src="imagenes/fotomoto.png" alt="">              
+            <img class="articles__image image" src="img/fotomoto.png" alt="">              
         </section>
-        <section class="form-container">
-            <h3>Registrate</h3>
-            <form action="registro.php" method="POST">
-                <table border="1">
-                    <tr>
-                        <td><label>Nombres</label></td>
-                        <td><input type="text" name="Num_Identificacions" placeholder="Nombres" required/></td>
-                    </tr>
-                    <tr>
-                        <td><label>Apellidos</label></td>
-                        <td><input type="text" name="Nombres" placeholder="Apellidos" required/></td>
-                    </tr>
-                    <tr>
-                        <td><label>Correo electronico</label></td>
-                        <td><input type="text" name="Correos" placeholder="example@mail.com" required/></td>
-                    </tr>
-                    <tr>
-                        <td><label>Contrase&ntilde;a</label></td>
-                        <td><input type="password" name="claves" placeholder="claves" required/></td>
-                    </tr>
+        <section class="container">
+            <h3 class="container--title">Registrate</h3>
+            <form class="container__form" action="registro.php" method="POST">
+                
+                <label class="form--label">Nombres</label>
+                <input class="form--input" type="text" name="Num_Identificacions" placeholder="Nombres" required/>
                     
-                    <tr>
-                        <td><label><input type="submit" value="registrate"></input></label></td>
+                <label class="form--label">Apellidos</label>
+                <input class="form--input" type="text" name="Nombres" placeholder="Apellidos" required/>
+                    
+                <label class="form--label">Correo electronico</label>
+                <input class="form--input" type="text" name="Correos" placeholder="Example@mail.com" required/>
+                   
+                <label class="form--label">Contraseña</label>
+                <input class="form--input" type="password" name="claves" placeholder="******" required/>
+                   
+                <input class="form--btn" type="submit" value="registrate"></input>
                         
-                    </tr>
+                   
             </form>
             <!-- Nunca pongas dentro de una etiqueta form una etiqueta img si quieres subir una imagen usa input type="file" -->
-            <img class="image" src="imagenes/moto11.png" alt="">           
+            <img class="image" src="img/moto11.png" alt="">           
         </section>
     </main>
-    <footer>
-        <h3>Contactanos</h3>
-        <p><span>Facebook:</span> @Motorespuestosplata_oficcial</p>
-        <p><span>Tel:</span> 3185960032</p>
-        <p><span>Correo:</span> motorepla@gamil.com</p>
+    <footer class="footer">
+        <h3 class="footer--title">Contactanos</h3>
+        <div class="footer__content">
+            <p><span>Facebook:</span> @Motorespuestosplata_oficcial </p>
+            <p><span>Tel:</span> 3185960032 </p>
+            <p><span>Correo:</span> Motorepla@gamil.com</p>
+        </div>
     </footer>
-    
 </body>
 </html> 
