@@ -21,7 +21,7 @@
     <main class="main">
         <section class="articles">
             <article class="articles__about-me">
-                <img class="about-me--logo" src="img/logo.png.png" alt="">
+                <img class="about-me--logo" src="img/logo.png" alt="">
                 <div class="about-me__content">
                     <h2 class="content--title">Quienes somos</h2>
                     <p class="content--paragraph"> 
@@ -32,30 +32,29 @@
                     </p>
                 </div>
             </article> 
-            <img class="articles__image image" src="img/fotomoto.png" alt="">              
+            <img class="articles__image" src="img/fotomoto.png" alt="">              
         </section>
         <section class="container">
             <h3 class="container--title">Registrate</h3>
             <form class="container__form" action="registro.php" method="POST">
                 
-                <label class="form--label">Nombres</label>
-                <input class="form--input" type="text" name="Num_Identificacions" placeholder="Nombres" required/>
+                <label for="Nombre" class="form--label">Nombres</label>
+                <input class="form--input" type="text" id="Nombres" name="Nombres" placeholder="Nombres" required/>
                     
-                <label class="form--label">Apellidos</label>
-                <input class="form--input" type="text" name="Nombres" placeholder="Apellidos" required/>
+                <label for="Apellidos" class="form--label">Apellidos</label>
+                <input class="form--input" type="text" id="Apellidos" name="Apellidos" placeholder="Apellidos" required/>
                     
-                <label class="form--label">Correo electronico</label>
-                <input class="form--input" type="text" name="Correos" placeholder="Example@mail.com" required/>
+                <label for="Correo" class="form--label">Correo electronico</label>
+                <input class="form--input" type="text" id="Correo" name="Correo" placeholder="Example@mail.com" required/>
                    
-                <label class="form--label">Contraseña</label>
-                <input class="form--input" type="password" name="claves" placeholder="******" required/>
+                <label for="clave" class="form--label">Contraseña</label>
+                <input class="form--input" type="password" id="clave" name="clave" placeholder="******" required/>
                    
                 <input class="form--btn" type="submit" value="registrate"></input>
                         
                    
             </form>
-            <!-- Nunca pongas dentro de una etiqueta form una etiqueta img si quieres subir una imagen usa input type="file" -->
-            <img class="image" src="img/moto11.png" alt="">           
+            <img class="container--img" src="img/moto11.png" alt="">           
         </section>
     </main>
     <footer class="footer">
