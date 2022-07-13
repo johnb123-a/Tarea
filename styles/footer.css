@@ -1,0 +1,16 @@
+footer{
+    height: auto;
+    background: #ecb9bd;
+    color: rgb(29, 23, 23);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 32px 0;
+}
+
+footer p span{ 
+    font-weight: bold;
+}
