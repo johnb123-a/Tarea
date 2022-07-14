@@ -1,30 +1,41 @@
 <?php
-	//conexion con la base de datos y el servidor
-	$link = mysql_connect("localhost","root","") or die("<h2>No se encuentra el servidor</h2>");
-	$db = mysql_select_db("motoresrespuestos",$link) or die("<h2>Error de Conexion</h2>");
+	$user = "root";
+	$pass = "";
+	$host = "localhost";
+	 
+	$connection =mysqli_connect($host,$user,$pass)
+    
 
-	//obtenemos los valores del formulario
-	$Num_Identificacion = $_POST['Num_Identificacions'];
-	$Nombre = $_POST['Nombres'];
-	$Correo = $_POST['Correos'];
-	$clave = $_POST['claves'];
-	
+	//LLamamos a los inputs 
+	$Nombres = $_POST["Nombres"]
+	$Apellidos = $_POST["Apellidos"]
+	$Correo = $_POST["Correo"]
+	$Clave = $_POST["Clave"]
 
-	//Obtiene la longitus de un string
-	$req = (strlen($Num_Identificacion)*strlen($Nombre)*strlen($Correo)*strlen($clave)) or die("No se han llenado todos los campos");
+	if(!$connection){
+		echo "No se ha podido conectar al servidor" . mysql_error();
+	} else{
+		echo "<b><h3>Hemos conectado al servidor</h3></b>" ;
+	}
 
+	//indicamos el nombre de la base datos
+	$datab = "formulario";
+	//indicamos selecionar ala base datos
+	$db = mysqli_select_db($connection,$datab);
 
+	if (!$db)
+	{
+	echo "No se ha podido encontrar la Tabla";
+	}
+	else
+	{
+	echo "<h3>Tabla seleccionada:</h3>" ;
+	}
 
-	
-
-	//ingresamos la informacion a la base de datos
-	mysql_query("INSERT INTO registrate VALUES('$Num_Identificacion','$Nombre','$Correo','$clave')",$link) or die("<h2>Error Guardando los datos</h2>");
-	echo'
-		<script>
-			alert("Registro Exitoso");
-			location.href="index.html";
-		</script>
-	'
-
+	//insertamos datos de registro al mysql xamp, indicando nombre de la tabla y sus atributos
+	$instruccion_SQL = "INSERT INTO usuarios (Nombre, Apellido, Correo, Contraseña)
+	VALUES ('$nombre','$usuario','$contraseña')";
+  
+    $resultado = mysqli_query($connection,$instruccion_SQL);
 
 ?>
