@@ -6,9 +6,8 @@
     flex-direction: column;
     gap: 16px;
     padding: 16px 32px;
-    position: absolute;
+    position: fixed;
     width: 100%;
-    bottom: 0;
 }
 
 .footer--title {

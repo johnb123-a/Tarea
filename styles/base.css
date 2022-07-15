@@ -16,5 +16,5 @@ body {
     display: flex;
     border-radius: 15px;
     border: 5px dotted black;
-
+    height: max-content;
 }

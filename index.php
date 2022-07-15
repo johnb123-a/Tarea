@@ -3,14 +3,15 @@
 	$pass = "";
 	$host = "localhost";
 	 
-	$connection =mysqli_connect($host,$user,$pass)
+	$connection =mysqli_connect($host,$user,$pass);
     
 
 	//LLamamos a los inputs 
-	$Nombres = $_POST["Nombres"]
-	$Apellidos = $_POST["Apellidos"]
-	$Correo = $_POST["Correo"]
-	$Clave = $_POST["Clave"]
+	$Cedula = $_POST['Cedula'];
+	$Nombres = $_POST['Nombres'];
+	$Correo = $_POST['Correo'];
+	$Repuesto = $_POST['Repuesto'];
+	$Cant = $_POST['Cant'];
 
 	if(!$connection){
 		echo "No se ha podido conectar al servidor" . mysql_error();
@@ -33,9 +34,12 @@
 	}
 
 	//insertamos datos de registro al mysql xamp, indicando nombre de la tabla y sus atributos
-	$instruccion_SQL = "INSERT INTO usuarios (Nombre, Apellido, Correo, Contraseña)
-	VALUES ('$nombre','$usuario','$contraseña')";
+	$instruccion_SQL = "INSERT INTO usuario (Cedula,Nombre,Correo, Repuesto , Cantidad)
+	VALUES ('$Cedula','$Nombres','$Correo','$Repuesto','$Cant')";
+
+	"SELECT * FROM usuario where Nombre = '$variable'"
   
     $resultado = mysqli_query($connection,$instruccion_SQL);
-
+    
+	echo "resultado: "+ $resultado;
 ?>
